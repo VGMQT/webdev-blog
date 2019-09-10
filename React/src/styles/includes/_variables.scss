@@ -1,9 +1,15 @@
-$font_name: 'Open Sans';
-$font-path_name: 'OpenSans';
+$font_name: 'Montserrat';
+$font-path_name: $font_name;
 
 // Static colors
 $white: #ffffff;
+$sunrise: #ffccbb;
+$blue-topaz: #6eb5c0;
+$cerulean: #006c84;
+$icicle: #e2e8e4;
 
 // Project colors
-$accent_color: #61dafb;
-$bg_color: #282c34;
+$main_color: $icicle;
+$accent_color: $sunrise;
+$dark_color: $cerulean;
+$bg_color: #1a7c92;

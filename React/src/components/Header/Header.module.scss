@@ -1,0 +1,64 @@
+@import '../../styles/includes/includes';
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($dark_color, 0.7);
+  }
+}
+
+:global(.hamburger),
+:global(.hamburger.is-active) {
+  &:hover,
+  &:focus {
+    opacity: 1;
+
+    :global(.hamburger),
+    :global(.hamburger.is-active) {
+      &-inner,
+      :global(.hamburger-inner) {
+        background-color: $accent_color;
+
+        &::before,
+        &::after {
+          background-color: $accent_color;
+        }
+      }
+    }
+  }
+
+  &-inner,
+  :global(.hamburger-inner) {
+    background-color: $main_color;
+
+    &::before,
+    &::after {
+      background-color: $main_color;
+    }
+  }
+}
+
+.menu {
+  @include center();
+  z-index: 1;
+
+  &__link {
+    @include font(700);
+    font-size: 50px;
+    color: $main_color;
+    transition: all 0.3s;
+
+    &:hover,
+    &:focus {
+      color: $accent_color;
+    }
+  }
+}
