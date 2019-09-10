@@ -1,0 +1,48 @@
+{
+  "name": "@vgmqt/webdev-blog",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VGMQT/webdev-blog.git"
+  },
+  "keywords": [
+    "blog",
+    "web",
+    "development"
+  ],
+  "author": "Vlad Gerasimovich <vlad.gerasimovich.dev@gmail.com>",
+  "license": "MIT",
+  "bugs": "https://github.com/VGMQT/webdev-blog/issues",
+  "dependencies": {
+    "react-scripts": "3.1.1"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.2",
+    "husky": "^3.0.0",
+    "lint-staged": "^9.2.0",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1",
+    "stylelint": "^10.1.0",
+    "stylelint-config-standard": "^18.3.0",
+    "stylelint-order": "^3.0.1"
+  },
+  "lint-staged": {
+    "React/src/**/*.{js,jsx}": [
+      "pretty-quick",
+      "eslint 'React/src/**/*.{js,jsx}' --fix"
+    ],
+    "React/src/**/*.{scss,sass,css}": [
+      "stylelint 'React/src/**/*.{scss,sass,css}' --fix"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && git add ."
+    }
+  }
+}
